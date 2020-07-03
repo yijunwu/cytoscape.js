@@ -35,17 +35,19 @@ var cy = window.cy = cytoscape({
       { data: { id: 'c', parent: 'b' }, position: { x: 300, y: 85 } },
       { data: { id: 'd' }, position: { x: 215, y: 175 } },
       { data: { id: 'e' } },
-      { data: { id: 'f', parent: 'e' }, position: { x: 300, y: 175 } }
+      { data: { id: 'f', parent: 'e' }, position: { x: 300, y: 175 } },
+	  { data: { id: 'g', parent: 'e' }, position: { x: 300, y: 175 } }
     ],
     edges: [
       { data: { id: 'ad', source: 'a', target: 'd' } },
-      { data: { id: 'eb', source: 'e', target: 'b' } }
+      { data: { id: 'eb', source: 'e', target: 'b' } },
+	  { data: { id: 'fg', source: 'f', target: 'g' } }
 
     ]
   },
 
   layout: {
-    name: 'preset',
+    name: 'dagre',
     padding: 5
   }
 });
